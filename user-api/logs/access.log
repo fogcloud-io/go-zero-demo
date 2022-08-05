@@ -1,0 +1,58 @@
+2022-07-24T13:38:18.448+08:00	[34;1m info [0m	[HTTP] [42;97;1m 200 [0m - [44;97;1m GET [0m /userapi/v1/user/info - 127.0.0.1:60946 - PostmanRuntime/7.26.8	duration=1.1ms	trace=fce5d42950bdc36b79ad0551c0a2cd76	span=ac83e7caaa4f2885	caller=handler/loghandler.go:197
+2022-07-24T13:39:44.621+08:00	[34;1m info [0m	[HTTP] [42;97;1m 200 [0m - [44;97;1m GET [0m /userapi/v1/user/info - 127.0.0.1:60997 - PostmanRuntime/7.26.8	duration=2.6ms	trace=4d6417b43e44621b42bf7a3a126d919b	span=d7964a61132a72cd	caller=handler/loghandler.go:197
+2022-07-24T13:39:48.809+08:00	[34;1m info [0m	[HTTP] [42;97;1m 200 [0m - [44;97;1m GET [0m /userapi/v1/user/info - 127.0.0.1:60999 - PostmanRuntime/7.26.8	duration=1.0ms	trace=89ceeabc663ae7fd20e82500a73c7ef6	span=890a13925d8180bc	caller=handler/loghandler.go:197
+caller=handler/loghandler.go:1996da9c3info - 127.0.0.1:61149 - PostmanRuntime/7.26.8
+GET /userapi/v1/user/info HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Cache-Control: no-cache
+Connection: keep-alive
+Content-Length: 12
+Content-Type: application/json
+Postman-Token: f9aa2af1-4a7a-48dd-8f0d-6f980d6cb36f
+User-Agent: PostmanRuntime/7.26.8
+
+{"userId":1}anic({0x2a3d880, 0xc0002e48f0})
+	C:/Program Files/Go/src/runtime/panic.go:1047 +0x262
+google.golang.org/appengine/internal.Logf({0x2e95cf0, 0xc000124bc0}, 0x1, {0x2d14cc1, 0x1a}, {0x0, 0x0, 0x0})
+	C:/Users/ghy/go/pkg/mod/google.golang.org/appengine@v1.6.6/internal/api_common.go:87 +0x1e8
+google.golang.org/appengine/log.Infof({0x2e95cf0, 0xc000124bc0}, {0x2d14cc1, 0x1a}, {0x0, 0x0, 0x0})
+	C:/Users/ghy/go/pkg/mod/google.golang.org/appengine@v1.6.6/log/api.go:24 +0x65
+main.RpcInterceptors({0x2e95cf0, 0xc000124bc0}, {0x2b4b2e0, 0xc000597bf0}, 0xc00014a320, 0xc0006ac8a0)
+	D:/IdeaProjects/zero-demo/user-rpc/user.go:47 +0x7d
+google.golang.org/grpc.chainUnaryInterceptors.func1.1({0x2e95cf0, 0xc000124bc0}, {0x2b4b2e0, 0xc000597bf0})
+	C:/Users/ghy/go/pkg/mod/google.golang.org/grpc@v1.47.0/server.go:1117 +0x11c
+github.com/zeromicro/go-zero/zrpc/internal/serverinterceptors.UnaryTimeoutInterceptor.func1.1()
+	C:/Users/ghy/go/pkg/mod/github.com/zeromicro/go-zero@v1.3.5/zrpc/internal/serverinterceptors/timeoutinterceptor.go:39 +0x1bb
+created by github.com/zeromicro/go-zero/zrpc/internal/serverinterceptors.UnaryTimeoutInterceptor.func1
+	C:/Users/ghy/go/pkg/mod/github.com/zeromicro/go-zero@v1.3.5/zrpc/internal/serverinterceptors/timeoutinterceptor.go:29 +0x3a5
+o/pkg/mod/github.com/zeromicro/go-zero@v1.3.5/zrpc/internal/serverinterceptors/timeoutinterceptor.go:29 +0x3a5	duration=3.4ms	trace=21d73d3d67e4bf0bff8bd20d0e6da9c3	span=5438ab30a980a0a6	caller=clientinterceptors/durationinterceptor.go:25
+2022-07-24T19:21:47.133+08:00	 info 	[HTTP]  200  -  GET  /userapi/v1/user/info - 127.0.0.1:61217 - PostmanRuntime/7.26.8	duration=3.7ms	trace=530e6c2b59c48ccdf7f7981d78ebae64	span=54085edaadc0a13a	caller=handler/loghandler.go:197
+ParseTokenInterceptor start ...a6dd-9b4194df348daf47-00caller=user/userInfoLogic.go:28
+2022-07-24T19:38:42.780+08:00	 info 	ParseTokenInterceptor start ...	caller=svc/serviceContext.go:25
+2022-07-24T19:38:42.781+08:00	 info 	ParseTokenInterceptor start ...	caller=svc/serviceContext.go:30
+2022-07-24T19:38:42.782+08:00	 info 	[HTTP]  200  -  GET  /userapi/v1/user/info - 127.0.0.1:61479 - PostmanRuntime/7.26.8	duration=2.2ms	trace=b9f6e4302de1ae957f5b0b0ad41da6dd	span=3f5716ff71b49db0	caller=handler/loghandler.go:197
+00-1f86c851daa11045199b6d10b6f931c5-77d50396925fa60b-00caller=user/userInfoLogic.go:28
+2022-07-24T19:38:49.542+08:00	 info 	ParseTokenInterceptor start ...	caller=svc/serviceContext.go:25
+2022-07-24T19:38:49.543+08:00	 info 	ParseTokenInterceptor start ...	caller=svc/serviceContext.go:30
+2022-07-24T19:38:49.543+08:00	 info 	[HTTP]  200  -  GET  /userapi/v1/user/info - 127.0.0.1:61512 - PostmanRuntime/7.26.8	duration=1.6ms	trace=1f86c851daa11045199b6d10b6f931c5	span=858fef64dae59bef	caller=handler/loghandler.go:197
+00-ad68774d0b237067bd4bf7a6b70fedc0-a335cafa3637e698-00caller=user/userInfoLogic.go:28
+2022-07-24T19:38:50.221+08:00	 info 	ParseTokenInterceptor start ...	caller=svc/serviceContext.go:25
+2022-07-24T19:38:50.221+08:00	 info 	ParseTokenInterceptor start ...	caller=svc/serviceContext.go:30
+2022-07-24T19:38:50.221+08:00	 info 	[HTTP]  200  -  GET  /userapi/v1/user/info - 127.0.0.1:61512 - PostmanRuntime/7.26.8	duration=1.7ms	trace=ad68774d0b237067bd4bf7a6b70fedc0	span=9df141ae02185ead	caller=handler/loghandler.go:197
+00-2b098c06c3f6118421f3ad81bf68389a-26b2384c03008011-00caller=user/userInfoLogic.go:28
+2022-07-24T19:39:29.290+08:00	 info 	ParseTokenInterceptor start ...	caller=svc/serviceContext.go:25
+2022-07-24T19:39:29.292+08:00	 info 	ParseTokenInterceptor start ...	caller=svc/serviceContext.go:30
+2022-07-24T19:39:29.292+08:00	 info 	[HTTP]  200  -  GET  /userapi/v1/user/info - 127.0.0.1:61532 - PostmanRuntime/7.26.8	duration=4.2ms	trace=2b098c06c3f6118421f3ad81bf68389a	span=625bbd5b2ae74b0a	caller=handler/loghandler.go:197
+00-4c8b9c3a096df3973680b0bc7c305233-6d4c0f06e53f0a6a-00caller=user/userInfoLogic.go:28
+2022-07-24T19:39:30.344+08:00	 info 	ParseTokenInterceptor start ...	caller=svc/serviceContext.go:25
+2022-07-24T19:39:30.344+08:00	 info 	ParseTokenInterceptor start ...	caller=svc/serviceContext.go:30
+2022-07-24T19:39:30.344+08:00	 info 	[HTTP]  200  -  GET  /userapi/v1/user/info - 127.0.0.1:61532 - PostmanRuntime/7.26.8	duration=1.1ms	trace=4c8b9c3a096df3973680b0bc7c305233	span=d43ab32f2ca6931c	caller=handler/loghandler.go:197
+2022-07-24T19:39:30.973+08:00	 info 	ParseTokenInterceptor start ...	caller=svc/service2022-07-24T19:39:30.973+08:00	 info 	ParseTokenInterceptor start ...	caller=svc/serviceContext.go:25
+2022-07-24T19:39:30.981+08:00	 info 	ParseTokenInterceptor start ...	caller=svc/serviceContext.go:30
+2022-07-24T19:39:30.981+08:00	 info 	[HTTP]  200  -  GET  /userapi/v1/user/info - 127.0.0.1:61532 - PostmanRuntime/7.26.8	duration=8.3ms	trace=b5960001712f73cb43b70e2cc02c3cd4	span=4a3bc985f8b7f920	caller=handler/loghandler.go:197
+00-a60f464e27f9212850c26688daf4f8f7-7e9531a86607d6ec-00caller=user/userInfoLogic.go:28
+2022-07-24T19:39:45.951+08:00	 info 	ParseTokenInterceptor start ...	caller=svc/serviceContext.go:25
+2022-07-24T19:39:48.207+08:00	 info 	ParseTokenInterceptor err:rpc error: code = DeadlineExceeded desc = context deadline exceeded	caller=svc/serviceContext.go:28
+14344.1ms4T19:39:48.777+08:00	 info 	ParseTokenInterceptor start ...	caller=svc/serviceContext.go:30

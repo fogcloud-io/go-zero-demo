@@ -1,0 +1,59 @@
+// api语法版本
+syntax = "v1"
+
+info(
+	author: "gaohy"
+	date: "2020-01-08"
+	desc: "api语法示例及语法说明"
+)
+
+type (
+	UserInfoReq {
+		UserId int64 `json:"userId"`
+	}
+	UserInfoResp {
+		UserId   int64  `json:"userId"`
+		Nickname string `json:"nickname"`
+	}
+
+	ProjectInfoReq {
+		ProKey string `json:"proKey"`
+	}
+	ProjectInfoResp {
+		AccessKey    string `json:"access_key"`
+		AccessSecret string `json:"access_secret"`
+		CreateAt     string `json:"create_at"`
+		Name         string `json:"name"`
+		Status       int    `json:"status"`
+		Types        string `json:"types"`
+	}
+)
+
+@server(
+	group : user
+	prefix :userapi/v1
+)
+service user-api {
+	@doc "获取用户信息"
+	@handler userInfo
+	get /user/info (UserInfoReq) returns (UserInfoResp)
+	
+	@doc "更新用户信息"
+	@handler userUpdate
+	post /user/update (UserInfoReq) returns (UserInfoResp)
+}
+
+@server(
+	group : user
+	prefix : userapi/v1/auth
+	jwt : JwtAuth
+)
+service user-api {
+	@doc "获取用户信息需鉴权"
+	@handler userInfoAuth
+	get /user/info (UserInfoReq) returns (UserInfoResp)
+	
+	@doc "获取项目信息"
+	@handler projectInfo
+	get /project/info (ProjectInfoReq) returns (ProjectInfoResp)
+}

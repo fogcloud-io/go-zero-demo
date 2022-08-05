@@ -1,0 +1,9 @@
+ error handler/loghandler.go:199f4f8f7info - 127.0.0.1:61533 - PostmanRuntime/7.26.8
+GET /userapi/v1/user/info HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Cache-Control: no-cache
+Connection: keep-alive
+Content-Length: 12
+Conten2022-07-24T19:39:50.119+08:00	 slow 	[RPC] ok - slowcall - discov:/127.0.0.1:2379/user.rpc/pb.usercenter/getUserInfo - id:1 - 	duration=14344.1ms	trace=a60f464e27f9212850c26688daf4f8f7	span=7e9531a86607d6ec	caller=clientinterceptors/durationinterceptor.go:30

@@ -1,0 +1,36 @@
+2022-07-24T13:34:48.364+08:00	[31;1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+Starting server at 0.0.0.0:8888...
+1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+Starting server at 0.0.0.0:8888...
+1m error [0m	bad resolver state	caller=internal/discovbuilder.go:34
+Starting server at 0.0.0.0:8888...
+r 	bad resolver state	caller=internal/discovbuilder.go:34
+Starting server at 0.0.0.0:8888...
+r 	bad resolver state	caller=internal/discovbuilder.go:34
+2022-07-24T19:17:18.167+08:00	 error 	[HTTP]  500  -  GET  /userapi/v1/user/info - 127.0.0.1:61149 - PostmanRuntime/7.26.8
+GET /userapi/v1/user/info HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Cache-Control: no-cache
+Connection: keep-alive
+Content-Length: 12
+Content-Type: application/json
+Postman-Token: f9aa2af1-4a7a-48dd-8f0d-6f980d6cb36f
+User-Agent: PostmanRuntime/7.26.8
+
+{"userId":1}	duration=3.9ms	trace=21d73d3d67e4bf0bff8bd20d0e6da9c3	span=d3694ee6e0ac6d65	caller=handler/loghandler.go:199
+2022-07-24T19:21:38.649+08:00	 error 	bad resolver state	caller=internal/discovbuilder.go:34
+2022-07-24T19:39:48.776+08:00	 error 	[HTTP]  503  -  GET  /userapi/v1/user/info - 127.0.0.1:61533 - PostmanRuntime/7.26.8
+GET /userapi/v1/user/info HTTP/1.1
+Host: 127.0.0.1:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Cache-Control: no-cache
+Connection: keep-alive
+Content-Length: 12
+Content-Type: application/json
+Postman-Token: 9cff8e2d-6037-477d-98dd-ad504b98d6ca
+User-Agent: PostmanRuntime/7.26.8
+
+{"userId":1}	duration=12431.5ms	trace=a60f464e27f9212850c26688daf4f8f7	span=4ec0d010330cb93f	caller=handler/loghandler.go:199
